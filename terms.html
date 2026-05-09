@@ -1,0 +1,459 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Terms of Use — CitizenPrep AI</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,600;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --navy: #1B3A6B;
+      --navy-light: #2a4f8f;
+      --accent: #3B6CC7;
+      --text: #1a1a2e;
+      --muted: #6b7280;
+      --border: #e2e6ed;
+      --bg: #f8f9fc;
+      --white: #ffffff;
+    }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: 'DM Sans', sans-serif;
+      font-weight: 300;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.75;
+      font-size: 16px;
+    }
+
+    /* Header */
+    header {
+      background: var(--navy);
+      padding: 48px 24px 40px;
+      text-align: center;
+    }
+
+    .app-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: rgba(255,255,255,0.12);
+      border: 1px solid rgba(255,255,255,0.2);
+      border-radius: 100px;
+      padding: 6px 16px;
+      margin-bottom: 24px;
+      font-size: 13px;
+      color: rgba(255,255,255,0.8);
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+      font-weight: 500;
+    }
+
+    .app-badge svg {
+      width: 14px; height: 14px;
+      fill: rgba(255,255,255,0.7);
+    }
+
+    header h1 {
+      font-family: 'Lora', serif;
+      font-size: clamp(28px, 5vw, 42px);
+      font-weight: 600;
+      color: #fff;
+      letter-spacing: -0.02em;
+      margin-bottom: 12px;
+    }
+
+    header p {
+      font-size: 14px;
+      color: rgba(255,255,255,0.55);
+      font-weight: 300;
+    }
+
+    /* Layout */
+    .container {
+      max-width: 740px;
+      margin: 0 auto;
+      padding: 60px 24px 80px;
+    }
+
+    /* TOC */
+    .toc {
+      background: var(--white);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 28px 32px;
+      margin-bottom: 52px;
+    }
+
+    .toc-title {
+      font-size: 11px;
+      font-weight: 500;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      color: var(--muted);
+      margin-bottom: 16px;
+    }
+
+    .toc ol {
+      list-style: none;
+      columns: 2;
+      column-gap: 24px;
+    }
+
+    .toc li {
+      break-inside: avoid;
+      margin-bottom: 8px;
+    }
+
+    .toc a {
+      font-size: 14px;
+      color: var(--accent);
+      text-decoration: none;
+      font-weight: 400;
+      transition: color 0.15s;
+    }
+
+    .toc a:hover { color: var(--navy); text-decoration: underline; }
+
+    @media (max-width: 520px) {
+      .toc ol { columns: 1; }
+    }
+
+    /* Sections */
+    section {
+      margin-bottom: 48px;
+      scroll-margin-top: 24px;
+    }
+
+    section h2 {
+      font-family: 'Lora', serif;
+      font-size: 20px;
+      font-weight: 600;
+      color: var(--navy);
+      margin-bottom: 14px;
+      padding-bottom: 10px;
+      border-bottom: 1px solid var(--border);
+      display: flex;
+      align-items: baseline;
+      gap: 10px;
+    }
+
+    .section-num {
+      font-family: 'DM Sans', sans-serif;
+      font-size: 12px;
+      font-weight: 500;
+      color: var(--accent);
+      background: #eef2fb;
+      border-radius: 4px;
+      padding: 2px 7px;
+      letter-spacing: 0.02em;
+      flex-shrink: 0;
+    }
+
+    section h3 {
+      font-size: 15px;
+      font-weight: 500;
+      color: var(--navy);
+      margin: 20px 0 8px;
+    }
+
+    section p {
+      font-size: 15px;
+      color: #374151;
+      margin-bottom: 14px;
+      font-weight: 300;
+    }
+
+    section ul {
+      list-style: none;
+      margin: 8px 0 16px 0;
+      padding: 0;
+    }
+
+    section ul li {
+      font-size: 15px;
+      color: #374151;
+      font-weight: 300;
+      padding: 5px 0 5px 20px;
+      position: relative;
+    }
+
+    section ul li::before {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 14px;
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+      background: var(--accent);
+      opacity: 0.5;
+    }
+
+    .caps {
+      font-size: 13.5px;
+      font-weight: 400;
+      color: #4b5563;
+      background: #f3f4f6;
+      border-left: 3px solid var(--navy);
+      border-radius: 0 6px 6px 0;
+      padding: 14px 18px;
+      margin-bottom: 14px;
+      line-height: 1.65;
+    }
+
+    a { color: var(--accent); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+
+    /* Divider */
+    .divider {
+      border: none;
+      border-top: 1px solid var(--border);
+      margin: 52px 0;
+    }
+
+    /* Footer */
+    footer {
+      background: var(--navy);
+      text-align: center;
+      padding: 32px 24px;
+    }
+
+    footer p {
+      font-size: 13px;
+      color: rgba(255,255,255,0.45);
+    }
+
+    footer a {
+      color: rgba(255,255,255,0.65);
+    }
+
+    footer a:hover { color: #fff; }
+
+    /* Nav link back to privacy */
+    .doc-nav {
+      display: flex;
+      justify-content: center;
+      gap: 24px;
+      margin-bottom: 44px;
+    }
+
+    .doc-nav a {
+      font-size: 13px;
+      font-weight: 500;
+      color: var(--muted);
+      text-decoration: none;
+      padding: 6px 14px;
+      border: 1px solid var(--border);
+      border-radius: 100px;
+      background: var(--white);
+      transition: all 0.15s;
+    }
+
+    .doc-nav a:hover, .doc-nav a.active {
+      border-color: var(--accent);
+      color: var(--accent);
+      background: #eef2fb;
+      text-decoration: none;
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <div class="app-badge">
+    <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 14H9V8h2v8zm4 0h-2V8h2v8z"/></svg>
+    CitizenPrep AI
+  </div>
+  <h1>Terms of Use</h1>
+  <p>Last updated: May 8, 2026 &nbsp;·&nbsp; citizenprepai.com</p>
+</header>
+
+<div class="container">
+
+  <nav class="doc-nav">
+    <a href="privacy.html">Privacy Policy</a>
+    <a href="terms.html" class="active">Terms of Use</a>
+  </nav>
+
+  <nav class="toc">
+    <div class="toc-title">Contents</div>
+    <ol>
+      <li><a href="#s1">Acceptance of Terms</a></li>
+      <li><a href="#s2">Eligibility</a></li>
+      <li><a href="#s3">Description of Service</a></li>
+      <li><a href="#s4">User Accounts</a></li>
+      <li><a href="#s5">Subscriptions &amp; Purchases</a></li>
+      <li><a href="#s6">AI Interview Feature</a></li>
+      <li><a href="#s7">Acceptable Use</a></li>
+      <li><a href="#s8">Intellectual Property</a></li>
+      <li><a href="#s9">Third-Party Services</a></li>
+      <li><a href="#s10">Advertising</a></li>
+      <li><a href="#s11">Disclaimers</a></li>
+      <li><a href="#s12">Limitation of Liability</a></li>
+      <li><a href="#s13">Indemnification</a></li>
+      <li><a href="#s14">Termination</a></li>
+      <li><a href="#s15">Governing Law</a></li>
+      <li><a href="#s16">Apple-Specific Terms</a></li>
+      <li><a href="#s17">Changes to These Terms</a></li>
+      <li><a href="#s18">Contact</a></li>
+    </ol>
+  </nav>
+
+  <section id="s1">
+    <h2><span class="section-num">01</span> Acceptance of Terms</h2>
+    <p>By downloading, installing, or using CitizenPrep AI (the "App"), you agree to be bound by these Terms of Use ("Terms"). If you do not agree to these Terms, do not use the App.</p>
+    <p>These Terms constitute a legal agreement between you and Jorge Roman ("we," "us," or "our"), an individual operating the App from the State of Florida, United States.</p>
+  </section>
+
+  <section id="s2">
+    <h2><span class="section-num">02</span> Eligibility</h2>
+    <p>You must be at least 13 years of age to use CitizenPrep AI. By using the App, you represent and warrant that you meet this requirement. If you are between 13 and 18 years of age, you represent that your parent or legal guardian has reviewed and agreed to these Terms on your behalf.</p>
+  </section>
+
+  <section id="s3">
+    <h2><span class="section-num">03</span> Description of Service</h2>
+    <p>CitizenPrep AI is a U.S. naturalization exam preparation application that provides:</p>
+    <ul>
+      <li>Civics question practice based on official USCIS materials</li>
+      <li>AI-powered mock interview simulations (paid feature)</li>
+      <li>Progress tracking and readiness insights</li>
+      <li>Study materials and answer feedback</li>
+    </ul>
+    <p>The App is for educational and preparation purposes only. We do not guarantee that use of the App will result in passing any official examination or obtaining U.S. citizenship.</p>
+  </section>
+
+  <section id="s4">
+    <h2><span class="section-num">04</span> User Accounts</h2>
+    <p>To use certain features of the App, you must create an account using a valid email address and password, or Sign in with Apple. You are responsible for maintaining the confidentiality of your account credentials and for all activity that occurs under your account.</p>
+    <p>You agree to provide accurate and complete information when creating your account and to update it as necessary. You may delete your account at any time from within the App.</p>
+  </section>
+
+  <section id="s5">
+    <h2><span class="section-num">05</span> Subscriptions &amp; In-App Purchases</h2>
+    <h3>5.1 Subscription Plans</h3>
+    <p>CitizenPrep AI offers the following access tiers:</p>
+    <ul>
+      <li><strong>Resident (Free)</strong> — no ads, full study &amp; quiz access, and the option to watch an advertisement to unlock a single AI interview session</li>
+      <li><strong>Applicant</strong> — paid plan with additional features, available monthly ($1.99/month) or yearly ($14.99/year)</li>
+      <li><strong>Citizen</strong> — full access including up to 10 AI interview sessions per day, available monthly ($4.99/month) or yearly ($39.99/year)</li>
+    </ul>
+
+    <h3>5.2 Automatic Renewal</h3>
+    <p>Subscriptions automatically renew unless canceled at least 24 hours before the end of the current billing period. Your Apple ID account will be charged for renewal within 24 hours prior to the end of the current period. You can manage and cancel your subscription at any time in your Apple ID Settings.</p>
+
+    <h3>5.3 Billing and Refunds</h3>
+    <p>All purchases are processed by Apple through the App Store. Prices are in U.S. dollars and are subject to change. Refund requests are handled by Apple in accordance with their App Store refund policy. For billing questions, contact us at <a href="mailto:support@citizenprepai.com">support@citizenprepai.com</a>.</p>
+
+    <h3>5.4 Free Trials</h3>
+    <p>If a free trial is offered, any unused portion of a free trial period will be forfeited when you purchase a subscription.</p>
+  </section>
+
+  <section id="s6">
+    <h2><span class="section-num">06</span> AI Interview Feature</h2>
+    <p>The AI interview simulation feature uses your device microphone to record your spoken responses. By using this feature, you consent to the collection and processing of your audio data as described in our <a href="privacy.html">Privacy Policy</a>.</p>
+    <p>AI-generated feedback is provided for educational purposes only and does not constitute legal advice or an official assessment of your readiness for any government examination. Interview session results, transcripts, and scores are stored in your account to track your progress over time.</p>
+  </section>
+
+  <section id="s7">
+    <h2><span class="section-num">07</span> Acceptable Use</h2>
+    <p>You agree not to:</p>
+    <ul>
+      <li>Use the App for any unlawful purpose or in violation of any applicable laws</li>
+      <li>Attempt to reverse engineer, decompile, or disassemble the App</li>
+      <li>Use automated tools or bots to access or scrape the App</li>
+      <li>Interfere with or disrupt the integrity or performance of the App or its servers</li>
+      <li>Share, sell, or transfer your account to any other person</li>
+    </ul>
+  </section>
+
+  <section id="s8">
+    <h2><span class="section-num">08</span> Intellectual Property</h2>
+    <p>All content within CitizenPrep AI, including but not limited to text, graphics, logos, interface design, and software, is owned by or licensed to Jorge Roman and is protected by applicable intellectual property laws.</p>
+    <p>USCIS civics questions used in the App are based on publicly available U.S. government materials. The App's compilation, arrangement, and presentation of such materials is proprietary.</p>
+    <p>You are granted a limited, non-exclusive, non-transferable, revocable license to use the App solely for your personal, non-commercial educational purposes.</p>
+  </section>
+
+  <section id="s9">
+    <h2><span class="section-num">09</span> Third-Party Services</h2>
+    <p>The App integrates third-party services including Google Firebase, Google AdMob, and Apple's authentication and payment services. Your use of those services is also governed by their respective terms and privacy policies. We are not responsible for the practices of any third-party service providers.</p>
+  </section>
+
+  <section id="s10">
+    <h2><span class="section-num">10</span> Advertising</h2>
+    <p>Resident (free) plan users may see advertisements served through Google AdMob. Advertisements are subject to your App Tracking Transparency (ATT) preference, which you can manage in iOS Settings. Paid subscribers with an active Applicant or Citizen plan will not see advertisements.</p>
+  </section>
+
+  <section id="s11">
+    <h2><span class="section-num">11</span> Disclaimers</h2>
+    <div class="caps">THE APP IS PROVIDED "AS IS" AND "AS AVAILABLE" WITHOUT WARRANTIES OF ANY KIND, EITHER EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE, OR NON-INFRINGEMENT.</div>
+    <p>We do not warrant that the App will be uninterrupted, error-free, or free of viruses or other harmful components. We do not guarantee the accuracy or completeness of any content in the App.</p>
+  </section>
+
+  <section id="s12">
+    <h2><span class="section-num">12</span> Limitation of Liability</h2>
+    <div class="caps">TO THE MAXIMUM EXTENT PERMITTED BY APPLICABLE LAW, JORGE ROMAN SHALL NOT BE LIABLE FOR ANY INDIRECT, INCIDENTAL, SPECIAL, CONSEQUENTIAL, OR PUNITIVE DAMAGES ARISING OUT OF OR RELATED TO YOUR USE OF THE APP, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGES.</div>
+    <p>Our total liability to you for any claims arising out of or related to these Terms or the App shall not exceed the amount you paid us in the twelve (12) months preceding the claim.</p>
+  </section>
+
+  <section id="s13">
+    <h2><span class="section-num">13</span> Indemnification</h2>
+    <p>You agree to indemnify, defend, and hold harmless Jorge Roman from and against any claims, liabilities, damages, losses, and expenses (including reasonable attorneys' fees) arising out of or related to your use of the App or your violation of these Terms.</p>
+  </section>
+
+  <section id="s14">
+    <h2><span class="section-num">14</span> Termination</h2>
+    <p>We reserve the right to suspend or terminate your access to the App at any time, with or without notice, for conduct that we believe violates these Terms or is harmful to other users, us, or third parties.</p>
+    <p>You may terminate your use of the App at any time by deleting your account and uninstalling the App. Termination does not entitle you to a refund of any subscription fees already charged.</p>
+  </section>
+
+  <section id="s15">
+    <h2><span class="section-num">15</span> Governing Law</h2>
+    <p>These Terms are governed by and construed in accordance with the laws of the State of Florida, United States, without regard to its conflict of law provisions. Any disputes arising under these Terms shall be subject to the exclusive jurisdiction of the courts located in Miami-Dade County, Florida.</p>
+  </section>
+
+  <section id="s16">
+    <h2><span class="section-num">16</span> Apple-Specific Terms</h2>
+    <p>CitizenPrep AI is distributed through the Apple App Store. To the extent required by Apple's App Store Review Guidelines, you acknowledge that:</p>
+    <ul>
+      <li>These Terms are between you and Jorge Roman only, not with Apple</li>
+      <li>Apple has no obligation to provide maintenance or support for the App</li>
+      <li>Apple is not responsible for addressing any claims relating to the App</li>
+      <li>Apple is a third-party beneficiary of these Terms and may enforce them against you</li>
+    </ul>
+  </section>
+
+  <section id="s17">
+    <h2><span class="section-num">17</span> Changes to These Terms</h2>
+    <p>We may update these Terms from time to time. We will notify you of material changes through the App or by email. Continued use of the App after changes are posted constitutes your acceptance of the revised Terms.</p>
+  </section>
+
+  <section id="s18">
+    <h2><span class="section-num">18</span> Contact</h2>
+    <p>If you have questions about these Terms, please contact us at:</p>
+    <p>
+      <strong>Jorge Roman</strong><br />
+      <a href="mailto:support@citizenprepai.com">support@citizenprepai.com</a><br />
+    </p>
+  </section>
+
+  <hr class="divider" />
+
+  <p style="text-align:center; font-size:13px; color: var(--muted);">
+    Also read our <a href="privacy.html">Privacy Policy</a>
+  </p>
+
+</div>
+
+<footer>
+  <p>&copy; 2026 CitizenPrep AI &mdash; Jorge Roman &nbsp;·&nbsp;</p>
+</footer>
+
+</body>
+</html>
